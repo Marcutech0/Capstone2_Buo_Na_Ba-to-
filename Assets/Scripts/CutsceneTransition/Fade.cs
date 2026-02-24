@@ -4,15 +4,16 @@ using UnityEngine;
 public class Fade : MonoBehaviour
 {
     public CanvasGroup _FadePanel;
+    public Canvas _FadeCanvas;
     public float _FadeDuration = 1.0f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public void Start()
     {
-        FadeIn();
+        FadeIn(); // Start with a fade-in effect when the scene loads
     }
 
+    // Coroutine to handle the fade effect
     IEnumerator FadeCanvasGroup(CanvasGroup _Cutscene, float _Start, float _End, float _Duration) 
     {
         float _Elapsedtime = 0.0f;
@@ -25,15 +26,17 @@ public class Fade : MonoBehaviour
         _Cutscene.alpha = _End;
     }
 
-    
 
+    // Public methods to trigger fade in and fade out effects
     public void FadeOut() 
     {
         StartCoroutine(FadeCanvasGroup(_FadePanel, _FadePanel.alpha, 1, _FadeDuration));
+        _FadeCanvas.sortingOrder = 10;
     }
 
     public void FadeIn()
     {
         StartCoroutine(FadeCanvasGroup(_FadePanel, _FadePanel.alpha, 0, _FadeDuration));
+        _FadeCanvas.sortingOrder = 0; 
     }
 }

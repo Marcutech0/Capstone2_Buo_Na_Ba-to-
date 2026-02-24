@@ -204,5 +204,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fade
   _FadePanel: {fileID: 1365277552763663918}
-  _FadePanelObject: {fileID: 8047046132755499776}
+  _FadeCanvas: {fileID: 2598544955983738836}
   _FadeDuration: 1

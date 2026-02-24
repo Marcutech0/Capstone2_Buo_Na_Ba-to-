@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &224054220
+--- !u!1001 &283836113
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -130,124 +130,229 @@ PrefabInstance:
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: _NpcName
       value: 
-      objectReference: {fileID: 667215793}
+      objectReference: {fileID: 1484517518}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: _NextScene
-      value: Scene1_Chapter1
+      value: Sorting_Minigame_Buo_Na_Bato
       objectReference: {fileID: 0}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: _StoryText
       value: 
-      objectReference: {fileID: 667215792}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _UIHandler
-      value: 
-      objectReference: {fileID: 224054221}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _ChoiceIndex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _ChoicePanel
-      value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1484517517}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: _DialoguePanel
       value: 
-      objectReference: {fileID: 667215794}
+      objectReference: {fileID: 1484517519}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: _FadeTransition
       value: 
-      objectReference: {fileID: 437366225}
+      objectReference: {fileID: 917493210}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _FadePanelObject
-      value: 
-      objectReference: {fileID: 342753938}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _ArtifactLogPanel
+      propertyPath: _BlackScreenText
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _Choices.Array.size
+      propertyPath: _BlackScreenIndex
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_Choices.Array.data[0]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_Choices.Array.data[1]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_Choices.Array.data[2]'
+      propertyPath: _BlackScreenPanel
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: _CurrentLines.Array.size
-      value: 6
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: '_CurrentLines.Array.data[0]'
-      value: I sigh as I gently close my journal and look up to see my surroundings.
-        The living room feels homey, its walls decorated with portraits, with woodcraft
-        for ventanilla and capiz windows from the 1860s.
+      value: You return to the living room where the kids are and see some of them
+        rounded up in a circle rummaging through a pile of school supplies and toys.
       objectReference: {fileID: 0}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: '_CurrentLines.Array.data[1]'
-      value: "Well, that's what it used to be\u2026 Now it's just muddied, destroyed,
-        and worn down."
+      value: You approach Carmen who was overheading her siblings that were all huddling
+        together in one area.
       objectReference: {fileID: 0}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: '_CurrentLines.Array.data[2]'
-      value: "Hearing the news about Malabon\u2019s precious heritage zone being
-        severely flooded the moment I woke up really put me on edge. Seeing what
-        was left made my heart sink."
+      value: Nahanap ko na manika ni Tess!
       objectReference: {fileID: 0}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: '_CurrentLines.Array.data[3]'
-      value: "I decided to become a historian so I can study the conservation of
-        international history, but the Raymundo house\u2026 I left it as is despite
-        my parents saying it had belonged to one of our distant relatives."
+      value: Oh mabuti naman, salamat sa paghahanap.
       objectReference: {fileID: 0}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: '_CurrentLines.Array.data[4]'
-      value: "And right now I\u2019m standing inside the living room, seeing it destroyed
-        alongside the other remaining heritage houses. I couldn't help but feel like
-        I had failed my mission as the house\u2019s caretaker and historian, even
-        though the flooding wasn\u2019t my fault."
+      value: Carmen takes the doll from you and hands it over to Tess.
       objectReference: {fileID: 0}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: '_CurrentLines.Array.data[5]'
-      value: "There\u2019s no use moping what\u2019s done is done. I might as well
-        find anything left that is worth salvaging in this mess."
+      value: Yay manika ko! Maraming salamat Aleks!
       objectReference: {fileID: 0}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: '_CurrentLines.Array.data[6]'
-      value: "I couldn't help but feel like I had failed my mission as the house\u2019s
-        caretaker and historian, even though the flooding wasn\u2019t my fault."
+      value: Walang anuman!
       objectReference: {fileID: 0}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: '_CurrentLines.Array.data[7]'
-      value: "There\u2019s no use moping what\u2019s done is done. I might as well
-        find anything left that is worth salvaging in this mess."
+      value: The little girl beams at you with a grateful smile before placing her
+        doll on a chair.
       objectReference: {fileID: 0}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: '_CurrentLines.Array.data[8]'
-      value: "There\u2019s no use moping what\u2019s done is done. I might as well
-        find anything left that is worth salvaging in this mess."
+      value: You turn to the other group of kids shuffling through the various supplies
+        and toys. Most of them were bickering while others were grabbing whatever
+        stuff they could get their hands on.
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentLines.Array.data[9]'
+      value: Okey lang po ba matanong, anong nangyayari
       objectReference: {fileID: 0}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: _CurrentSpeakers.Array.size
-      value: 6
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentLines.Array.data[10]'
+      value: "Before Carmen could answer, the only boy amongst the sisters spoke
+        up, he seemed to be the most annoyed one, you believe this one is Dodong
+        as he\u2019s the only son after Carmen."
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentLines.Array.data[11]'
+      value: Nagkagulo mga gamit namin, Hindi ko mahanap yung akin.
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentLines.Array.data[12]'
+      value: May nakakuha ba sa libro ko?
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentLines.Array.data[13]'
+      value: Huy akin yan ah!
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentLines.Array.data[14]'
+      value: "Sigurado ka? Parang \u2018akin to ah."
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentLines.Array.data[15]'
+      value: Akin nga yan!
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentLines.Array.data[16]'
+      value: You watch as the siblings try to find their personal belongings and
+        argue about who owns what.
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentLines.Array.data[17]'
+      value: Pwede mo ba kami tulungan Aleks? Wala kaming matatapos sa gulo na to.
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentLines.Array.data[18]'
+      value: "Pwede naman. Siguro\u2026 pa-pilahin natin mga kapatid mo para ibubukod
+        ko mga gamit nila at ibibigay ko sa kanila paisa isa. Magaling ako sa mga
+        ganito!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentLines.Array.data[19]'
+      value: Maraming salamat!
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentLines.Array.data[20]'
+      value: Carmen turns to her siblings after thanking you and catches their attention
+        as if it was nothing, the power eldest sisters have is remarkable.
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentLines.Array.data[21]'
+      value: Oh makinig kayo sa akin!
       objectReference: {fileID: 0}
     - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: '_CurrentSpeakers.Array.data[0]'
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 4823966369566558366, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _ArtifactPanel
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[1]'
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[2]'
+      value: Aleks
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[3]'
+      value: Carmen
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[4]'
+      value: Carmen
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[5]'
+      value: Tess
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[6]'
+      value: Aleks
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[7]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[8]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[9]'
+      value: Aleks
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[10]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[11]'
+      value: Kuya Dodong
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[12]'
+      value: Sanse Aida
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[13]'
+      value: Bunso Linda
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[14]'
+      value: Dete Conchita
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[15]'
+      value: Bunso Linda
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[16]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[17]'
+      value: Carmen
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[18]'
+      value: Aleks
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[19]'
+      value: Carmen
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[20]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: '_CurrentSpeakers.Array.data[21]'
+      value: Carmen
       objectReference: {fileID: 0}
     - target: {fileID: 6077213997471759273, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: m_Name
@@ -255,7 +360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6827912375221051276, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 984.73816
+      value: 1080.897
       objectReference: {fileID: 0}
     - target: {fileID: 6827912375221051276, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -263,7 +368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6827912375221051276, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 210.48865
+      value: 1944.0322
       objectReference: {fileID: 0}
     - target: {fileID: 6827912375221051276, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -298,23 +403,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
---- !u!114 &224054221 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4823966369566558366, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-  m_PrefabInstance: {fileID: 224054220}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ae61c55ccab50e4b98ed2dcc92639c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ButtonManager
---- !u!1 &342753938 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8047046132755499776, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
-  m_PrefabInstance: {fileID: 437366223}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &437366223
+--- !u!1001 &917493209
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -407,13 +496,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2598544955983738836, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2598544955983738836, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6424071321348924430, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
-      propertyPath: _FadePanelObject
+      propertyPath: _FadeCanvas
       value: 
-      objectReference: {fileID: 437366224}
+      objectReference: {fileID: 917493211}
     - target: {fileID: 8047046132755499776, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
       propertyPath: m_Name
       value: Fade Panel
@@ -427,23 +520,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
---- !u!1 &437366224 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2391533779022517955, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
-  m_PrefabInstance: {fileID: 437366223}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &437366225 stripped
+--- !u!114 &917493210 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6424071321348924430, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
-  m_PrefabInstance: {fileID: 437366223}
+  m_PrefabInstance: {fileID: 917493209}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342753938}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e62d69bbfdb70c41a1418c083957d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fade
---- !u!1 &481589151
+--- !u!223 &917493211 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 2598544955983738836, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
+  m_PrefabInstance: {fileID: 917493209}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1110872600
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -451,9 +544,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 481589153}
-  - component: {fileID: 481589152}
-  - component: {fileID: 481589154}
+  - component: {fileID: 1110872602}
+  - component: {fileID: 1110872601}
+  - component: {fileID: 1110872603}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -461,13 +554,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!108 &481589152
+--- !u!108 &1110872601
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481589151}
+  m_GameObject: {fileID: 1110872600}
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
@@ -526,13 +619,13 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!4 &481589153
+--- !u!4 &1110872602
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481589151}
+  m_GameObject: {fileID: 1110872600}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
@@ -541,13 +634,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &481589154
+--- !u!114 &1110872603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481589151}
+  m_GameObject: {fileID: 1110872600}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
@@ -570,86 +663,7 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1 &612023840
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 612023843}
-  - component: {fileID: 612023842}
-  - component: {fileID: 612023841}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &612023841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 612023840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.UI.InputSystemUIInputModule
-  m_SendPointerHoverToParent: 1
-  m_MoveRepeatDelay: 0.5
-  m_MoveRepeatRate: 0.1
-  m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 0
-  m_CursorLockBehavior: 0
-  m_ScrollDeltaPerTick: 6
---- !u!114 &612023842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 612023840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventSystem
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &612023843
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 612023840}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &667215791
+--- !u!1001 &1484517516
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -737,42 +751,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2489603901453771529, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
-      propertyPath: m_fontSize
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 2489603901453771529, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
-      propertyPath: m_isRightToLeft
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2489603901453771529, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2907819405696372163, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 56.3457
-      objectReference: {fileID: 0}
-    - target: {fileID: 2907819405696372163, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -285
-      objectReference: {fileID: 0}
-    - target: {fileID: 3265573776078399619, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 56.3457
-      objectReference: {fileID: 0}
-    - target: {fileID: 3265573776078399619, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -233.36932
-      objectReference: {fileID: 0}
-    - target: {fileID: 6755572914234945504, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 243.3458
-      objectReference: {fileID: 0}
-    - target: {fileID: 6755572914234945504, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -351.63898
-      objectReference: {fileID: 0}
     - target: {fileID: 7469286810097385046, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -786,10 +764,10 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
---- !u!114 &667215792 stripped
+--- !u!114 &1484517517 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2489603901453771529, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
-  m_PrefabInstance: {fileID: 667215791}
+  m_PrefabInstance: {fileID: 1484517516}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -797,10 +775,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!114 &667215793 stripped
+--- !u!114 &1484517518 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7003723352191560221, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
-  m_PrefabInstance: {fileID: 667215791}
+  m_PrefabInstance: {fileID: 1484517516}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -808,12 +786,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!1 &667215794 stripped
+--- !u!1 &1484517519 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7503736047434442121, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
-  m_PrefabInstance: {fileID: 667215791}
+  m_PrefabInstance: {fileID: 1484517516}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1011551979
+--- !u!1 &1695525233
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -821,9 +799,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1011551982}
-  - component: {fileID: 1011551981}
-  - component: {fileID: 1011551980}
+  - component: {fileID: 1695525236}
+  - component: {fileID: 1695525235}
+  - component: {fileID: 1695525234}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -831,21 +809,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1011551980
+--- !u!81 &1695525234
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011551979}
+  m_GameObject: {fileID: 1695525233}
   m_Enabled: 1
---- !u!20 &1011551981
+--- !u!20 &1695525235
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011551979}
+  m_GameObject: {fileID: 1695525233}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -890,13 +868,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &1011551982
+--- !u!4 &1695525236
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011551979}
+  m_GameObject: {fileID: 1695525233}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
@@ -909,9 +887,8 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1011551982}
-  - {fileID: 481589153}
-  - {fileID: 437366223}
-  - {fileID: 667215791}
-  - {fileID: 224054220}
-  - {fileID: 612023843}
+  - {fileID: 1695525236}
+  - {fileID: 1110872602}
+  - {fileID: 1484517516}
+  - {fileID: 917493209}
+  - {fileID: 283836113}

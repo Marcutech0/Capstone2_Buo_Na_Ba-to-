@@ -4,20 +4,21 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static Unity.Cinemachine.IInputAxisOwner.AxisDescriptor;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject _DialoguePanel;
+    public GameObject _BlackScreenPanel;
     public TextMeshProUGUI _NpcName;
     public TextMeshProUGUI _StoryText;
+    public TextMeshProUGUI _BlackScreenText;
     public string[] _CurrentLines;
     public string[] _CurrentSpeakers;
     public string _NextScene;
     public int _CurrentLineIndex;
+    public int _BlackScreenIndex;
     public Fade _FadeTransition;
     public bool _Continue;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // Initialize the dialogue with the first set of lines and speakers
@@ -35,12 +36,19 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
-    {
+    { // Listen for player input to continue the dialogue
         if (Input.GetKeyDown(KeyCode.Mouse0) && _Continue)
         {
             _Continue = false;
+
+            // Trigger the black screen sequence based on the specified index
+            if (_CurrentLineIndex == _BlackScreenIndex) 
+            {
+                StartCoroutine(BlackScreenSequence());
+                return;
+            }
+
 
             // If we've reached the end of the dialogue lines, end the dialogue
             if (_CurrentLineIndex >= _CurrentLines.Length)
@@ -54,7 +62,6 @@ public class DialogueManager : MonoBehaviour
                 _CurrentLines[_CurrentLineIndex],
                 _CurrentSpeakers[_CurrentLineIndex]
             ));
-
             _CurrentLineIndex++;
         }
     }
@@ -95,5 +102,32 @@ public class DialogueManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(_NextScene);
+    }
+
+    // Coroutine to handle the black screen sequence with text updates and transitions
+    IEnumerator BlackScreenSequence() 
+    {
+        _Continue = false;
+        _FadeTransition.FadeOut();
+        yield return new WaitForSeconds(1f);
+
+        _DialoguePanel.SetActive(false);
+        _BlackScreenPanel.SetActive(true);
+
+        _BlackScreenText.text = "8 Hours Later";
+        yield return new WaitForSeconds(2f);
+
+        _BlackScreenText.text = "Knock Knock";
+
+        yield return new WaitForSeconds(1f);
+
+        _FadeTransition.FadeIn();
+        _BlackScreenPanel.SetActive(false);
+        _DialoguePanel.SetActive(false);
+
+        yield return new WaitForSeconds(1f);
+        _FadeTransition.FadeOut();
+        StartCoroutine(CallNextScene());
+
     }
 }
