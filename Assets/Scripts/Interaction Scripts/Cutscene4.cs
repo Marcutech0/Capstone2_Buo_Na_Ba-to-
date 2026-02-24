@@ -60,6 +60,7 @@ public class Cutscene4 : MonoBehaviour
                 else if (_DialogueIndex <= 4) 
                 {
                     ContinueMainDialogue();
+                    SceneManager.LoadScene("Cutscene1.1 Buo na ba to");
                 }
             }
         }

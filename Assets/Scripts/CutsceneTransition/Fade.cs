@@ -7,7 +7,8 @@ public class Fade : MonoBehaviour
     public float _FadeDuration = 1.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public void Start()
     {
         FadeIn();
     }
@@ -24,13 +25,15 @@ public class Fade : MonoBehaviour
         _Cutscene.alpha = _End;
     }
 
-    public void FadeIn() 
-    {
-        StartCoroutine(FadeCanvasGroup(_FadePanel, _FadePanel.alpha, 0, _FadeDuration));
-    }
+    
 
     public void FadeOut() 
     {
         StartCoroutine(FadeCanvasGroup(_FadePanel, _FadePanel.alpha, 1, _FadeDuration));
+    }
+
+    public void FadeIn()
+    {
+        StartCoroutine(FadeCanvasGroup(_FadePanel, _FadePanel.alpha, 0, _FadeDuration));
     }
 }
