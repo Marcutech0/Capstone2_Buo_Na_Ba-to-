@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScenes/MainMenu.unity
     guid: 1c7f6c877fa8c774796da1aa3b09d14f
   - enabled: 1
-    path: Assets/Scenes/Chapter 1 Buo na ba to/Cutscene1.1 Buo na ba to.unity
+    path: Assets/Scenes/Chapter 1 Buo na ba to/Prologue.unity
     guid: 376222c324f93da4aad5d337a96a8178
   - enabled: 1
     path: Assets/Scenes/Chapter 1 Buo na ba to/Room, Destroyed Raymundo House, Sala.unity
