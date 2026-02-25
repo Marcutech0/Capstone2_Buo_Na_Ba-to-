@@ -124,6 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b5539f4bde9e394d99fdccdb57b0431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Artifact_Interactable
-  artifactObject: {fileID: 0}
-  artifactUI: {fileID: 0}
-  artifactPanel: {fileID: 0}
+  artifactObject: {fileID: 3513198526907497234}
+  artifact: {fileID: 11400000, guid: a5097f776c9e8f24bb9c56d76e36d754, type: 2}
+  panel: {fileID: 0}
