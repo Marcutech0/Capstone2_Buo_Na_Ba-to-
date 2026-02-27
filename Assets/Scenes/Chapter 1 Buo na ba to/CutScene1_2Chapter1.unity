@@ -220,6 +220,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
+--- !u!114 &327034502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2489603901453771529, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
+  m_PrefabInstance: {fileID: 327034501}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &327034503 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7003723352191560221, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
+  m_PrefabInstance: {fileID: 327034501}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &327034504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7503736047434442121, guid: e6067ebc08edfab4c969277fa6577cf7, type: 3}
+  m_PrefabInstance: {fileID: 327034501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &505495994
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,6 +522,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37a7c1fa3983e724687e81fef3880398, type: 3}
+--- !u!1 &892032232 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7465735182129024733, guid: 37a7c1fa3983e724687e81fef3880398, type: 3}
+  m_PrefabInstance: {fileID: 892032231}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1112877346
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,8 +719,44 @@ PrefabInstance:
     - {fileID: 5294298617991857813, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 429757351134453496, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1403221923}
   m_SourcePrefab: {fileID: 100100000, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+--- !u!1 &1403221922 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 429757351134453496, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+  m_PrefabInstance: {fileID: 1403221921}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1403221923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403221922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881509897d951fe41b7fe859f21015d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CutScene1_2
+  _DialoguePanel: {fileID: 327034504}
+  _BlackScreenPanel: {fileID: 829594146}
+  _CutSceneImage: {fileID: 892032232}
+  _BlackScreenText: {fileID: 1112877348}
+  _NpcName: {fileID: 327034503}
+  _StoryText: {fileID: 327034502}
+  _NextScene: 
+  _Storyline: You lay in bed thinking about the devastating sight before you when
+    you first arrived at the heritage site.
+  _FadeTransition: {fileID: 1423815412}
+  _DialogueIndex: 0
+  _CurrentLineIndex: 0
+  _Continue: 0
+  _DialogueEnd: 0
+  _CurrentLines: []
+  _CurrentSpeakers: []
 --- !u!1001 &1423815411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -786,11 +854,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
---- !u!223 &1423815413 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 2598544955983738836, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
+--- !u!114 &1423815412 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6424071321348924430, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
   m_PrefabInstance: {fileID: 1423815411}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e62d69bbfdb70c41a1418c083957d22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fade
 --- !u!1 &1875001006
 GameObject:
   m_ObjectHideFlags: 0
