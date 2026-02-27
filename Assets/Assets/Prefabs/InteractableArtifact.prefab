@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1648770560526822329}
   - component: {fileID: -2004419436851174541}
   m_Layer: 0
-  m_Name: Interactable Object
+  m_Name: InteractableArtifact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

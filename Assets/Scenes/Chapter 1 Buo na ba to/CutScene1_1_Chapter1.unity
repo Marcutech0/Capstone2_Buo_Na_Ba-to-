@@ -237,17 +237,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
---- !u!1 &64271847 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8047046132755499776, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
-  m_PrefabInstance: {fileID: 64271846}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &64271848 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6424071321348924430, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
   m_PrefabInstance: {fileID: 64271846}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64271847}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e62d69bbfdb70c41a1418c083957d22, type: 3}
@@ -429,196 +424,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &957510653
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _NpcName
-      value: 
-      objectReference: {fileID: 1191304359}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _NextScene
-      value: Room, Destroyed Raymundo House, Sala
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _StoryLine
-      value: "The Raymundo House, one of Malabon\u2019s oldest heritage houses that
-        has been standing for years and even to this day."
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _StoryText
-      value: 
-      objectReference: {fileID: 1191304358}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _Storyline
-      value: "The Raymundo House, one of Malabon\u2019s oldest heritage houses that
-        has been standing for years and even to this day."
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _TextSpeed
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _DialoguePanel
-      value: 
-      objectReference: {fileID: 1191304357}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _FadeTransition
-      value: 
-      objectReference: {fileID: 64271848}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _FadePanelObject
-      value: 
-      objectReference: {fileID: 64271847}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _Lines.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_Lines.Array.data[0]'
-      value: hallo welcome to my dialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_Lines.Array.data[1]'
-      value: Alreightt
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _CurrentLines.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_CurrentLines.Array.data[0]'
-      value: "The Raymundo House, one of Malabon\u2019s oldest heritage houses that
-        has been standing for years and even to this day."
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_CurrentLines.Array.data[1]'
-      value: "Built in the year 1861, the house was known for being constructed around
-        the same time San Agustin Church was built, one of Malabon\u2019s notable
-        monuments, and the same year our national hero, Jose Rizal was born."
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_CurrentLines.Array.data[2]'
-      value: "The house was home to Joe Raymundo with his wife Tina and their eight
-        kids who all grew up adapting values and morals taught to them by their parents
-        and their \u2018Nanang\u2019 in the Raymundo house."
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_CurrentLines.Array.data[3]'
-      value: Each member of the Raymundo family had their own stories created within
-        the walls of the Raymundo home.
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_CurrentLines.Array.data[4]'
-      value: "This house has been a significant part of Malabon\u2019s heritage.
-        It stands as a monument of history and cultural identity amongst the Malubenos."
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_CurrentLines.Array.data[5]'
-      value: The Raymundo house was always a haven and a place of friendship, where
-        daily needs were met even in the most difficult circumstances by believers
-        who knew the Lord would provide.
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_CurrentLines.Array.data[6]'
-      value: Unfortunately-
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _CurrentSpeakers.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6077213997471759273, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: m_Name
-      value: Managers
-      objectReference: {fileID: 0}
-    - target: {fileID: 6827912375221051276, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 300.69913
-      objectReference: {fileID: 0}
-    - target: {fileID: 6827912375221051276, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6827912375221051276, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 363.31253
-      objectReference: {fileID: 0}
-    - target: {fileID: 6827912375221051276, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6827912375221051276, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6827912375221051276, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6827912375221051276, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6827912375221051276, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6827912375221051276, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6827912375221051276, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6077213997471759273, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 957510655}
-  m_SourcePrefab: {fileID: 100100000, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
---- !u!1 &957510654 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6077213997471759273, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-  m_PrefabInstance: {fileID: 957510653}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &957510655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957510654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61eb8703655c33c4c90e10f49864dfc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CutScene1_2
-  _DialoguePanel: {fileID: 1191304357}
-  _NpcName: {fileID: 1191304359}
-  _StoryText: {fileID: 1191304358}
-  _NextScene: CutScene1_2Chapter1
-  _CutsceneImage: {fileID: 35139448}
-  _Storyline: After making sure that the artifacts were safe and secured, there was
-    nothing left to do but leave the Raymundo house for the last time.
-  _FadeTransition: {fileID: 64271848}
-  _DialogueIndex: 0
-  _Continue: 0
-  _CurrentLines: []
-  _CurrentSpeakers: []
-  _CurrentLineIndex: 0
-  _DialogueEnd: 0
 --- !u!1001 &1191304356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -894,6 +699,83 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1001 &6709849534982726931
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 429757351134453496, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: m_Name
+      value: CutDialogueManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108388840519105245, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 300.69913
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108388840519105245, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108388840519105245, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 363.31253
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108388840519105245, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108388840519105245, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108388840519105245, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108388840519105245, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108388840519105245, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108388840519105245, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108388840519105245, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294298617991857813, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: _NpcName
+      value: 
+      objectReference: {fileID: 1191304359}
+    - target: {fileID: 5294298617991857813, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: _StoryText
+      value: 
+      objectReference: {fileID: 1191304358}
+    - target: {fileID: 5294298617991857813, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: _CutsceneImage
+      value: 
+      objectReference: {fileID: 35139448}
+    - target: {fileID: 5294298617991857813, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: _DialoguePanel
+      value: 
+      objectReference: {fileID: 1191304357}
+    - target: {fileID: 5294298617991857813, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
+      propertyPath: _FadeTransition
+      value: 
+      objectReference: {fileID: 64271848}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b302664a283b930489e9118e0cc70fa3, type: 3}
 --- !u!1001 &7935540417245505670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -969,4 +851,4 @@ SceneRoots:
   - {fileID: 7935540417245505670}
   - {fileID: 64271846}
   - {fileID: 1191304356}
-  - {fileID: 957510653}
+  - {fileID: 6709849534982726931}
