@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6827912375221051276}
+  - component: {fileID: 4823966369566558366}
+  - component: {fileID: 8255361771441820744}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -31,3 +33,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4823966369566558366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6077213997471759273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae61c55ccab50e4b98ed2dcc92639c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonManager
+  _FadeTransition: {fileID: 0}
+  _ExplorationTextObject: {fileID: 0}
+  _ArtifactPanel: {fileID: 0}
+--- !u!114 &8255361771441820744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6077213997471759273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88fbc951f2d6f0d4d867180d65850b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CuarititoINT
+  _DialoguePanel: {fileID: 0}
+  _NpcName: {fileID: 0}
+  _StoryText: {fileID: 0}
+  _NextScene: CutScene1_4_Chapter1
+  _Storyline: 
+  _FadeTransition: {fileID: 0}
+  _DialogueIndex: 0
+  _Continue: 0
+  _CurrentLines: []
+  _CurrentSpeakers: []
+  _CurrentLineIndex: 0
+  _DialogueEnd: 0
+  _Items: []
+  _IsTyping: 0
+  scenechecker: 0

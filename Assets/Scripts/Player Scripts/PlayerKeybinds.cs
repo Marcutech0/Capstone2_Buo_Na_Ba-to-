@@ -4,6 +4,7 @@ public class PlayerKeybinds : MonoBehaviour
 {
     [SerializeField] private GameObject Menu_UI;
     [SerializeField] private GameObject Game_Settings;
+    [SerializeField] private GameObject Artifacts_Panel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,6 +18,7 @@ public class PlayerKeybinds : MonoBehaviour
         {
             //Ensures Settings Menu is closed when opening and closing the main menu
             Game_Settings.SetActive(false);
+            Artifacts_Panel.SetActive(false);
             Menu_UI.SetActive(!Menu_UI.activeSelf);
             Time.timeScale = Menu_UI.activeSelf ? 0f : 1f;
         }
