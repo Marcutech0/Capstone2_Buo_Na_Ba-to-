@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter 1 Buo na ba to/CutScene1_6_Chapter1.unity
     guid: da3f13255293fb642a996caacd0229e5
   - enabled: 1
-    path: Assets/Scenes/Chapter 1 Buo na ba to/Explorations/Journal_Tutorial_Phase.unity
+    path: Assets/Scenes/Chapter 1 Buo na ba to/Journal_Tutorial_Phase.unity
     guid: 29a60bd45526fc04abcd4239b245d3d5
   - enabled: 1
     path: Assets/Scenes/Chapter 2 Buo na ba to/CutScene1_8_Chapter2.unity

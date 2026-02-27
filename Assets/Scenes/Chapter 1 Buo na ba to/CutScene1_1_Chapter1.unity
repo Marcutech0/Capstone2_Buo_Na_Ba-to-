@@ -841,6 +841,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37a7c1fa3983e724687e81fef3880398, type: 3}
+--- !u!114 &7935540417245505671 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7217664484537832638, guid: 37a7c1fa3983e724687e81fef3880398, type: 3}
+  m_PrefabInstance: {fileID: 7935540417245505670}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

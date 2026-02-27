@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class ImageArray : MonoBehaviour
 {
     [Header("UI Target")]
@@ -15,47 +15,53 @@ public class ImageArray : MonoBehaviour
 
     private int _currentIndex = 0;
     private Coroutine _slideshowCoroutine;
-
+    [SerializeField] private string _nextScene;
+    public GameObject[] _Buttons;
+    public GameObject _TutorialUI;
     private void Start()
     {
         if (_frameImages.Length == 0 || _targetImage == null)
             return;
 
         _targetImage.sprite = _frameImages[_currentIndex];
-        _slideshowCoroutine = StartCoroutine(SlideshowLoop());
     }
 
-    private IEnumerator SlideshowLoop()
+    public void EndTutorial() 
     {
-        while (true)
+        _TutorialUI.SetActive(false);
+        SceneManager.LoadScene(_nextScene);
+    }
+
+    public void NextImage() 
+    {
+        if (_frameImages.Length == 0 || _targetImage == null) return;
+
+        _currentIndex++;
+
+        if (_currentIndex < _frameImages.Length)
         {
-            yield return new WaitForSeconds(_frameInterval);
-
-            _currentIndex = (_currentIndex + 1) % _frameImages.Length;
             _targetImage.sprite = _frameImages[_currentIndex];
+            _Buttons[1].SetActive(true);
+            _Buttons[2].SetActive(true);
         }
-    }
 
-    // Optional manual controls (can be removed if not needed)
-    public void ShowNext()
-    {
-        if (_frameImages.Length == 0) return;
-
-        _currentIndex = (_currentIndex + 1) % _frameImages.Length;
         _targetImage.sprite = _frameImages[_currentIndex];
     }
 
-    public void ShowPrevious()
+    public void PreviousImage() 
     {
         if (_frameImages.Length == 0) return;
+        _currentIndex--;
 
-        _currentIndex = (_currentIndex - 1 + _frameImages.Length) % _frameImages.Length;
+        if (_currentIndex < 0) 
+        {
+            _currentIndex = 0;
+            return;
+        }
+
         _targetImage.sprite = _frameImages[_currentIndex];
-    }
+        _Buttons[1].SetActive(false);
+        _Buttons[2].SetActive(false);
 
-    private void OnDisable()
-    {
-        if (_slideshowCoroutine != null)
-            StopCoroutine(_slideshowCoroutine);
     }
 }
