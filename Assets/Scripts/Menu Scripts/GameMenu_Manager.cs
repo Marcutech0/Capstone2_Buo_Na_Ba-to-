@@ -6,6 +6,7 @@ public class GameMenu_Manager : MonoBehaviour
 {
     [SerializeField] private GameObject Game_Settings;
     [SerializeField] private GameObject Menu_UI;
+    [SerializeField] private GameObject Artifacts_Panel;
 
     //Audio Section
     [SerializeField] private AudioClip ClickSfx;
@@ -17,7 +18,8 @@ public class GameMenu_Manager : MonoBehaviour
     void Start()
     {
         GameFlowLegendManager = FindAnyObjectByType<GameFlowLegendManager>();
-       Game_Settings.SetActive(false);
+        Artifacts_Panel.SetActive(false);
+        Game_Settings.SetActive(false);
         Menu_UI.SetActive(false);
     }
 

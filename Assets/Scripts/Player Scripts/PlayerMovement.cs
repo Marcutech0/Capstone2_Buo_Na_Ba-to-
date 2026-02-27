@@ -1,63 +1,40 @@
 ﻿using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Movement Settings")]
-    public float moveSpeed = 5f;
+    // This script handles player movement using NavMeshAgent and updates the walking animation based on the player's velocity.
+    public Camera _Cam;
+    public NavMeshAgent _Player;
+    public Animator _PlayerAnimator;
+    public GameObject _TargetDest;
 
-    private PlayerControls _controls;
-    private CharacterController _controller;
-    private Vector2 _moveInput;
-
-    [Header("Animation")]
-    public Animator animator;
-
-    [Header("Animation Flipping")]
-    private SpriteRenderer _spriteRenderer;
-    public bool isFacingRight = true;
-
-    void Awake()
+    public void Update()
     {
-        _controls = new PlayerControls();
-        _controller = GetComponent<CharacterController>();
-    }
+        // Check for mouse input to set the destination for the NavMeshAgent
+        if (Input.GetMouseButtonDown(0)) 
+        {
+          Ray _Ray = _Cam.ScreenPointToRay(Input.mousePosition);
+          RaycastHit _HitPoint;
 
-    void OnEnable() => _controls.Player.Enable();
-    void OnDisable() => _controls.Player.Disable();
+            if (Physics.Raycast(_Ray, out _HitPoint)) 
+            {
+                _TargetDest.transform.position = _HitPoint.point;
+                _Player.SetDestination(_HitPoint.point);
+            }
+        }
 
-    void Start()
-    {
-        _controls.Player.Move.performed += ctx => _moveInput = ctx.ReadValue<Vector2>();
-        _controls.Player.Move.canceled += ctx => _moveInput = Vector2.zero;
-
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
-    void Update()
-    {
-        // ✅ Convert input (2D plane movement on X and Z)
-        Vector3 move = new Vector3(_moveInput.x, 0f, _moveInput.y);
-        _controller.Move(move * moveSpeed * Time.deltaTime);
-
-        // ✅ Animator parameters (for idle / walk)
-        animator.SetFloat("Horizontal", _moveInput.x);
-        animator.SetFloat("Vertical", _moveInput.y);
-        animator.SetFloat("Speed", move.sqrMagnitude);
-
-        // ✅ Flip sprite based on movement direction
-        if (_moveInput.x > 0 && !isFacingRight)
-            FlipSprite();
-        else if (_moveInput.x < 0 && isFacingRight)
-            FlipSprite();
-    }
-
-    //Sprite will flip based on the horizontal input direction
-    public void FlipSprite()
-    {
-        isFacingRight = !isFacingRight;
-        _spriteRenderer.flipX = !_spriteRenderer.flipX;
+        // Update the walking animation based on the player's velocity
+        if (_Player.velocity != Vector3.zero) 
+        {
+            _PlayerAnimator.SetBool("isWalking", true);
+        }
+        else if (_Player.velocity == Vector3.zero) 
+        {
+            _PlayerAnimator.SetBool("isWalking", false);
+        }
     }
 }

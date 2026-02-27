@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02b4af2a6218d542998ea9148605d3f, type: 3}
+  m_Name: Dildo
+  m_EditorClassIdentifier: Assembly-CSharp::ArtifactData
+  artifactID: artifact_dildo
+  artifactName: Dildo
+  description: 'A dildo is a versatile, non-vibrating, penetrative sex toy designed
+    for manual stimulation of the vagina or anus, used for solo or partner pleasure.
+    Ranging in size, shape, and material (silicone, glass, plastic), they offer varied
+    sensations and are often compatible with lubricants, allowing for personalized,
+    safe sexual exploration. '
+  icon: {fileID: 21300000, guid: effb3469389728044a4f4ba3a06690a1, type: 3}
