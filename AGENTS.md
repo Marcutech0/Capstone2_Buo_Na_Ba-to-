@@ -2,7 +2,7 @@
 - Project name: Capstone2_Buo_Na_Ba-to-
 - Unity version: Unity 6000.2.9f1
 - Active game object:
-  - Name: Fade Panel
+  - Name: Managers
   - Tag: Untagged
-  - Layer: UI
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

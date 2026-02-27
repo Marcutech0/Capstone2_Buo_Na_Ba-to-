@@ -237,17 +237,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
---- !u!1 &64271847 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8047046132755499776, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
-  m_PrefabInstance: {fileID: 64271846}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &64271848 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6424071321348924430, guid: f63e1614cc1533043bc6969ce4fc69a6, type: 3}
   m_PrefabInstance: {fileID: 64271846}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64271847}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e62d69bbfdb70c41a1418c083957d22, type: 3}
@@ -437,105 +432,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+    - target: {fileID: 4794132227555851619, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: _NpcName
       value: 
       objectReference: {fileID: 1191304359}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _NextScene
-      value: Room, Destroyed Raymundo House, Sala
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _StoryLine
-      value: "The Raymundo House, one of Malabon\u2019s oldest heritage houses that
-        has been standing for years and even to this day."
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+    - target: {fileID: 4794132227555851619, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: _StoryText
       value: 
       objectReference: {fileID: 1191304358}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _Storyline
-      value: "The Raymundo House, one of Malabon\u2019s oldest heritage houses that
-        has been standing for years and even to this day."
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _TextSpeed
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+    - target: {fileID: 4794132227555851619, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+      propertyPath: _CutsceneImage
+      value: 
+      objectReference: {fileID: 35139448}
+    - target: {fileID: 4794132227555851619, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: _DialoguePanel
       value: 
       objectReference: {fileID: 1191304357}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
+    - target: {fileID: 4794132227555851619, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: _FadeTransition
       value: 
       objectReference: {fileID: 64271848}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _FadePanelObject
-      value: 
-      objectReference: {fileID: 64271847}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _Lines.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_Lines.Array.data[0]'
-      value: hallo welcome to my dialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_Lines.Array.data[1]'
-      value: Alreightt
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _CurrentLines.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_CurrentLines.Array.data[0]'
-      value: "The Raymundo House, one of Malabon\u2019s oldest heritage houses that
-        has been standing for years and even to this day."
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_CurrentLines.Array.data[1]'
-      value: "Built in the year 1861, the house was known for being constructed around
-        the same time San Agustin Church was built, one of Malabon\u2019s notable
-        monuments, and the same year our national hero, Jose Rizal was born."
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_CurrentLines.Array.data[2]'
-      value: "The house was home to Joe Raymundo with his wife Tina and their eight
-        kids who all grew up adapting values and morals taught to them by their parents
-        and their \u2018Nanang\u2019 in the Raymundo house."
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_CurrentLines.Array.data[3]'
-      value: Each member of the Raymundo family had their own stories created within
-        the walls of the Raymundo home.
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_CurrentLines.Array.data[4]'
-      value: "This house has been a significant part of Malabon\u2019s heritage.
-        It stands as a monument of history and cultural identity amongst the Malubenos."
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_CurrentLines.Array.data[5]'
-      value: The Raymundo house was always a haven and a place of friendship, where
-        daily needs were met even in the most difficult circumstances by believers
-        who knew the Lord would provide.
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: '_CurrentLines.Array.data[6]'
-      value: Unfortunately-
-      objectReference: {fileID: 0}
-    - target: {fileID: 686456765658737974, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
-      propertyPath: _CurrentSpeakers.Array.size
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 6077213997471759273, guid: ce2ab44ccbc9b3c4e96319afc399e6a7, type: 3}
       propertyPath: m_Name
       value: Managers
@@ -604,10 +520,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61eb8703655c33c4c90e10f49864dfc0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CutScene1_2
+  m_EditorClassIdentifier: Assembly-CSharp::CutScene1_1
   _DialoguePanel: {fileID: 1191304357}
   _NpcName: {fileID: 1191304359}
-  _StoryText: {fileID: 1191304358}
+  _StoryText: {fileID: 7935540417245505671}
   _NextScene: CutScene1_2Chapter1
   _CutsceneImage: {fileID: 35139448}
   _Storyline: After making sure that the artifacts were safe and secured, there was
@@ -959,6 +875,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37a7c1fa3983e724687e81fef3880398, type: 3}
+--- !u!114 &7935540417245505671 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7217664484537832638, guid: 37a7c1fa3983e724687e81fef3880398, type: 3}
+  m_PrefabInstance: {fileID: 7935540417245505670}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
