@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
 {
     public GameObject _DialoguePanel;
     public GameObject _BlackScreenPanel;
+    public GameObject _CutSceneImage;
     public TextMeshProUGUI _NpcName;
     public TextMeshProUGUI _StoryText;
     public TextMeshProUGUI _BlackScreenText;
@@ -20,8 +21,8 @@ public class DialogueManager : MonoBehaviour
     public bool _Continue;
 
     void Start()
-    {
-        // Initialize the dialogue with the first set of lines and speakers
+    { // Initialize the dialogue system and start the first dialogue sequence
+        _CutSceneImage.SetActive(true);
         _CurrentLineIndex = 0;
         _Continue = false;
 
@@ -107,6 +108,7 @@ public class DialogueManager : MonoBehaviour
     // Coroutine to handle the black screen sequence with text updates and transitions
     IEnumerator BlackScreenSequence() 
     {
+        _CutSceneImage.SetActive(false);
         _Continue = false;
         _FadeTransition.FadeOut();
         yield return new WaitForSeconds(1f);

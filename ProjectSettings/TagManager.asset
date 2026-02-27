@@ -39,6 +39,8 @@ TagManager:
   - Ending1
   - Ending2
   - Door
+  - Artifact
+  - Interactable
   layers:
   - Default
   - TransparentFX
