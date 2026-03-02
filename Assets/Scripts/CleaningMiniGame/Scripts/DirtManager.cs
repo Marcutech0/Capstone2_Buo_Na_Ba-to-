@@ -21,7 +21,7 @@ public class DirtManager : MonoBehaviour
 
         if (_cleanedDirtCount >= 4)
         {
-            Debug.Log("Level Complete!");
+            Debug.Log("Level Complete!"); // Can Change this to anything (ex. Scene Transition, or Winning Panel)
         }
     }
 
