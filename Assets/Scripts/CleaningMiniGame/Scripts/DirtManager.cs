@@ -6,6 +6,12 @@ public class DirtManager : MonoBehaviour
 
     public int _cleanedDirtCount = 0;
 
+    [SerializeField] private GameObject _winScreen;
+
+    private void Start()
+    {
+        _winScreen.SetActive(false);
+    }
     void Awake()
     {
         if (_Instance == null)
@@ -22,6 +28,7 @@ public class DirtManager : MonoBehaviour
         if (_cleanedDirtCount >= 4)
         {
             Debug.Log("Level Complete!"); // Can Change this to anything (ex. Scene Transition, or Winning Panel)
+            _winScreen.SetActive(true);
         }
     }
 
