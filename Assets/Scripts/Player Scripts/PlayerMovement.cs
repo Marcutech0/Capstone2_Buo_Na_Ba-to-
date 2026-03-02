@@ -1,40 +1,86 @@
-﻿using JetBrains.Annotations;
-using UnityEngine;
-using UnityEngine.InputSystem;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(NavMeshAgent))]
 public class PlayerMovement : MonoBehaviour
 {
-    // This script handles player movement using NavMeshAgent and updates the walking animation based on the player's velocity.
     public Camera _Cam;
     public NavMeshAgent _Player;
     public Animator _PlayerAnimator;
-    public GameObject _TargetDest;
 
-    public void Update()
+    private bool _movementLocked = false;
+
+    private void Awake()
     {
-        // Check for mouse input to set the destination for the NavMeshAgent
-        if (Input.GetMouseButtonDown(0)) 
-        {
-          Ray _Ray = _Cam.ScreenPointToRay(Input.mousePosition);
-          RaycastHit _HitPoint;
+        // IMPORTANT for 2.5D
+        _Player.updateRotation = false;
+        _Player.updateUpAxis = false;
+    }
 
-            if (Physics.Raycast(_Ray, out _HitPoint)) 
+    private void Update()
+    {
+        if (_movementLocked) return;
+
+        // Mouse click movement
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = _Cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
             {
-                _TargetDest.transform.position = _HitPoint.point;
-                _Player.SetDestination(_HitPoint.point);
+                _Player.SetDestination(hit.point);
             }
         }
 
-        // Update the walking animation based on the player's velocity
-        if (_Player.velocity != Vector3.zero) 
+        HandleAnimationAndFlip();
+    }
+
+    private void LateUpdate()
+    {
+        // Fully lock rotation to prevent snapping
+        transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+    }
+
+    private void HandleAnimationAndFlip()
+    {
+        bool isMoving = _Player.velocity.magnitude > 0.1f;
+        _PlayerAnimator.SetBool("isWalking", isMoving);
+
+        if (!isMoving) return;
+
+        if (_Player.velocity.x > 0.05f)
         {
-            _PlayerAnimator.SetBool("isWalking", true);
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x);
+            transform.localScale = scale;
         }
-        else if (_Player.velocity == Vector3.zero) 
+        else if (_Player.velocity.x < -0.05f)
         {
-            _PlayerAnimator.SetBool("isWalking", false);
+            Vector3 scale = transform.localScale;
+            scale.x = -Mathf.Abs(scale.x);
+            transform.localScale = scale;
         }
+    }
+
+    // =========================
+    // CLEAN LOCK SYSTEM
+    // =========================
+
+    public void LockMovement()
+    {
+        _movementLocked = true;
+
+        _Player.isStopped = true;
+        _Player.ResetPath();
+        _Player.velocity = Vector3.zero;
+
+        _PlayerAnimator.SetBool("isWalking", false);
+    }
+
+    public void UnlockMovement()
+    {
+        _movementLocked = false;
+        _Player.isStopped = false;
     }
 }

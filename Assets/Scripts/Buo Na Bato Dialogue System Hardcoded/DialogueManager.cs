@@ -1,7 +1,8 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+
 public class DialogueManager : MonoBehaviour
 {
     [Header("UI")]
@@ -10,67 +11,74 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI _StoryText;
     public string _NextScene;
 
-    [TextArea] public string _Storyline;
+    [Header("Player")]
+    public PlayerMovement _PlayerMovement;
+    public SpriteRenderer _PlayerSprite;
 
     public Fade _FadeTransition;
-    [SerializeField] private int _DialogueIndex;
-    [SerializeField] private bool _Continue;
+
     [SerializeField] private string[] _CurrentLines;
     [SerializeField] private string[] _CurrentSpeakers;
     [SerializeField] public int _CurrentLineIndex;
-    [SerializeField] private bool _DialogueEnd;
-    [SerializeField] private GameObject[] _Items;
-    [SerializeField] private bool _IsTyping;
+
+    private bool _Continue;
+    private bool _IsTyping;
     private Coroutine _TypingCoroutine;
     private bool scenechecker;
-    // Public Methods
-    public void StartDialogueSet(string[] _Lines, string[] _Speakers, bool SceneChecker)
-    {
-        // Stop any ongoing typing coroutine before starting a new dialogue set
-        if (_TypingCoroutine != null)
-        {
-            StopCoroutine(_TypingCoroutine);
-        }
 
-        _StoryText.text = "";
+    private int[] _RestrictionIndices;
+    private bool _PlayerRestricted;          // Index restriction
+    private bool _DialogueMovementLock;      // Dialogue lock
+
+    public bool IsDialogueRunning { get; private set; }
+
+    // =========================================================
+    public void StartDialogueSet(
+        string[] _Lines,
+        string[] _Speakers,
+        bool SceneChecker,
+        int[] RestrictionIndices
+    )
+    {
+        IsDialogueRunning = true;
+
+        if (_TypingCoroutine != null)
+            StopCoroutine(_TypingCoroutine);
+
+        _DialoguePanel.SetActive(true);
+
         _CurrentLines = _Lines;
         _CurrentSpeakers = _Speakers;
         _CurrentLineIndex = 0;
         scenechecker = SceneChecker;
 
-        _TypingCoroutine = StartCoroutine(TypeLine(_CurrentLines[_CurrentLineIndex], _CurrentSpeakers[_CurrentLineIndex]));
+        _RestrictionIndices = RestrictionIndices;
+        _PlayerRestricted = false;
+
+        // 🔒 Dialogue always locks movement
+        _DialogueMovementLock = true;
+        _PlayerMovement?.LockMovement();
+
+        CheckRestriction();
+
+        _TypingCoroutine = StartCoroutine(
+            TypeLine(_CurrentLines[_CurrentLineIndex],
+            _CurrentSpeakers[_CurrentLineIndex])
+        );
     }
 
-
-    public void Update()
+    // =========================================================
+    void Update()
     {
-        // Check for mouse click to continue dialogue only if the dialogue panel is active
         if (_DialoguePanel.activeSelf && Input.GetMouseButtonDown(0))
         {
             ContinueDialogue();
         }
     }
 
-    // Ends the dialogue by deactivating the dialogue panel
-    public void EndDialogue()
-    {
-        _DialoguePanel.SetActive(false);
-        if (scenechecker)
-        {
-            NextScene();
-        }
-    }
-
-    // Initiates the scene transition by fading out and then loading the next scene after a short delay
-    public void NextScene()
-    {
-        _FadeTransition.FadeOut();
-        StartCoroutine(CallNextScene());
-    }
-
+    // =========================================================
     public void ContinueDialogue()
     {
-        // If currently typing, stop the coroutine and display the full line immediately
         if (_IsTyping)
         {
             StopCoroutine(_TypingCoroutine);
@@ -80,32 +88,95 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        // If not typing, proceed to the next line or end dialogue if there are no more lines
         if (_Continue)
         {
             _CurrentLineIndex++;
+
             if (_CurrentLineIndex < _CurrentLines.Length)
             {
-                _TypingCoroutine = StartCoroutine(TypeLine(_CurrentLines[_CurrentLineIndex], _CurrentSpeakers[_CurrentLineIndex]));
+                CheckRestriction();
+
+                _TypingCoroutine = StartCoroutine(
+                    TypeLine(_CurrentLines[_CurrentLineIndex],
+                    _CurrentSpeakers[_CurrentLineIndex])
+                );
             }
             else
             {
-                EndDialogue();       
+                EndDialogue();
             }
         }
     }
 
+    // =========================================================
+    void CheckRestriction()
+    {
+        if (_RestrictionIndices == null || _RestrictionIndices.Length == 0)
+            return;
 
-    //Coroutines
+        foreach (int index in _RestrictionIndices)
+        {
+            if (_CurrentLineIndex == index)
+            {
+                TogglePlayerRestriction();
+            }
+        }
+    }
 
-    // Scene Transition Coroutine
+    public void TogglePlayerRestriction()
+    {
+        _PlayerRestricted = !_PlayerRestricted;
+
+        // Sprite controlled ONLY by index system
+        if (_PlayerSprite != null)
+            _PlayerSprite.enabled = !_PlayerRestricted;
+
+        // Movement respects BOTH systems
+        if (_PlayerMovement != null)
+        {
+            if (_PlayerRestricted || _DialogueMovementLock)
+                _PlayerMovement.LockMovement();
+            else
+                _PlayerMovement.UnlockMovement();
+        }
+    }
+
+    // =========================================================
+    public void EndDialogue()
+    {
+        _DialoguePanel.SetActive(false);
+
+        IsDialogueRunning = false;
+        _DialogueMovementLock = false;
+
+        if (_PlayerMovement != null)
+        {
+            if (_PlayerRestricted)
+                _PlayerMovement.LockMovement();
+            else
+                _PlayerMovement.UnlockMovement();
+        }
+
+        if (_PlayerSprite != null)
+            _PlayerSprite.enabled = !_PlayerRestricted;
+
+        if (scenechecker)
+            NextScene();
+    }
+
+    // =========================================================
+    public void NextScene()
+    {
+        _FadeTransition.FadeOut();
+        StartCoroutine(CallNextScene());
+    }
+
     IEnumerator CallNextScene()
     {
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(_NextScene);
     }
 
-    // Dialogue Typing Effect Coroutine
     IEnumerator TypeLine(string _Line, string _Speaker)
     {
         _IsTyping = true;
@@ -119,6 +190,7 @@ public class DialogueManager : MonoBehaviour
             _StoryText.text += c;
             yield return new WaitForSeconds(0.01f);
         }
+
         _IsTyping = false;
         _Continue = true;
     }

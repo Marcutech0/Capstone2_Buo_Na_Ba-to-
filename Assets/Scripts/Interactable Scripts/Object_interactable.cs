@@ -1,11 +1,23 @@
 using UnityEngine;
+using UnityEngine.AI;
+using System.Collections;
 
 [System.Serializable]
 public struct DialogueEmotionRange
 {
     public int StartLineIndex;
-    public int EndLineIndex; // inclusive
+    public int EndLineIndex;
     public Emotion EmotionType;
+}
+
+[System.Serializable]
+public struct CharacterDialogueData
+{
+    public GameObject characterObject;
+    public EmotionController emotionController;
+    public int showAtLineIndex;
+    public int hideAtLineIndex;
+    public DialogueEmotionRange[] emotionRanges;
 }
 
 public class Object_interactable : MonoBehaviour
@@ -16,17 +28,16 @@ public class Object_interactable : MonoBehaviour
     [SerializeField] public string[] DialogueLines;
     [SerializeField] public string[] DialogueSpeakers;
 
-    [Header("Character Visibility")]
-    [SerializeField] private GameObject characterObject;
-    [SerializeField] private int showAtLineIndex = 0;
-    [SerializeField] private int hideAtLineIndex = -1;
+    [Header("Player Movement")]
+    [SerializeField] private NavMeshAgent playerAgent;
+    [SerializeField] private float interactionDistance = 1f;
 
-    [Header("Emotions (Range Based)")]
-    [SerializeField] private EmotionController emotionController;
-    [SerializeField] private DialogueEmotionRange[] emotionRanges;
+    [Header("Multiple Characters")]
+    [SerializeField] private CharacterDialogueData[] characters;
 
     private int lastCheckedLineIndex = -1;
     private bool dialogueRunning = false;
+    private bool isInteracting = false;
 
     void Update()
     {
@@ -39,74 +50,92 @@ public class Object_interactable : MonoBehaviour
             if (currentIndex != lastCheckedLineIndex)
             {
                 lastCheckedLineIndex = currentIndex;
-
-                HandleCharacterVisibility(currentIndex);
-                HandleEmotionRange(currentIndex);
+                HandleCharacters(currentIndex);
             }
         }
         else
         {
-            // Dialogue ended
             dialogueRunning = false;
 
-            // Reset to neutral when dialogue closes
-            if (emotionController != null)
-                emotionController.SetEmotion(Emotion.Neutral);
+            foreach (var character in characters)
+            {
+                if (character.emotionController != null)
+                    character.emotionController.SetEmotion(Emotion.Neutral);
+            }
         }
     }
 
     private void OnMouseDown()
     {
-        if (!dialogueScript._DialoguePanel.activeSelf)
+        if (!dialogueScript._DialoguePanel.activeSelf && !isInteracting)
         {
-            dialogueScript._DialoguePanel.SetActive(true);
-
-            lastCheckedLineIndex = -1;
-            dialogueRunning = true;
-
-            dialogueScript.StartDialogueSet(
-                DialogueLines,
-                DialogueSpeakers,
-                SceneChecker
-            );
-
-            // FORCE neutral at start
-            if (emotionController != null)
-                emotionController.SetEmotion(Emotion.Neutral);
+            StartCoroutine(MoveAndStartDialogue());
         }
     }
 
-    private void HandleCharacterVisibility(int lineIndex)
+    private IEnumerator MoveAndStartDialogue()
     {
-        if (characterObject == null) return;
+        isInteracting = true;
 
-        if (lineIndex == showAtLineIndex)
-            characterObject.SetActive(true);
+        playerAgent.SetDestination(transform.position);
 
-        if (hideAtLineIndex >= 0 && lineIndex == hideAtLineIndex)
-            characterObject.SetActive(false);
+        while (Vector3.Distance(playerAgent.transform.position, transform.position) > interactionDistance)
+        {
+            yield return null;
+        }
+
+        playerAgent.ResetPath();
+
+        dialogueScript._DialoguePanel.SetActive(true);
+        dialogueRunning = true;
+        lastCheckedLineIndex = -1;
+
+        dialogueScript.StartDialogueSet(
+            DialogueLines,
+            DialogueSpeakers,
+            SceneChecker,
+            new int[] { -1 }
+        );
+
+        foreach (var character in characters)
+        {
+            if (character.emotionController != null)
+                character.emotionController.SetEmotion(Emotion.Neutral);
+        }
+
+        isInteracting = false;
     }
 
-    private void HandleEmotionRange(int lineIndex)
+    private void HandleCharacters(int lineIndex)
     {
-        if (emotionController == null) return;
-
-        Emotion selectedEmotion = Emotion.Neutral;
-        bool foundMatch = false;
-
-        foreach (var range in emotionRanges)
+        foreach (var character in characters)
         {
-            if (lineIndex >= range.StartLineIndex &&
-                lineIndex <= range.EndLineIndex)
+            if (character.characterObject != null)
             {
-                selectedEmotion = range.EmotionType;
-                foundMatch = true;
-                break;
+                if (lineIndex == character.showAtLineIndex)
+                    character.characterObject.SetActive(true);
+
+                if (character.hideAtLineIndex >= 0 &&
+                    lineIndex == character.hideAtLineIndex)
+                    character.characterObject.SetActive(false);
+            }
+
+            if (character.emotionController != null)
+            {
+                Emotion selectedEmotion = Emotion.Neutral;
+
+                foreach (var range in character.emotionRanges)
+                {
+                    if (lineIndex >= range.StartLineIndex &&
+                        lineIndex <= range.EndLineIndex)
+                    {
+                        selectedEmotion = range.EmotionType;
+                        break;
+                    }
+                }
+
+                character.emotionController.SetEmotion(selectedEmotion);
             }
         }
-
-        // Always explicitly set emotion
-        emotionController.SetEmotion(selectedEmotion);
-        Debug.Log("Current Line: " + lineIndex + " Emotion: " + selectedEmotion);
     }
 }
