@@ -41,6 +41,7 @@ TagManager:
   - Door
   - Artifact
   - Interactable
+  - Sponge
   layers:
   - Default
   - TransparentFX
@@ -48,8 +49,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - MiniGameSponge
+  - MiniGameDirt
   - 
   - 
   - 
