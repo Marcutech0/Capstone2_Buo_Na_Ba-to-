@@ -20,7 +20,7 @@ public class DraggingText : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("Begin dragging " + gameObject.name);
+        Debug.Log("Begin _dragging " + gameObject.name);
     }
 
     public void OnDrag(PointerEventData eventData)
